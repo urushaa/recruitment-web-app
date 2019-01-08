@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Genese Entrance Web</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+<link href="style-two.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+</head>
+<body>
+
+<div id="style2_wrapper">
+	<div id="style2_top">
+        <div id="style2_menu">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="integrated.html">examinee form</a></li>
+                <li><a href="register.html">register admin</a></li>
+               
+            </ul>    	
+        </div>
+        <div id="login_box">
+            <form id="signinForm">
+                <input type="email" id="emailInputSignin" value="Username" name="q" size="10" class="login_field" title="username" onfocus="clearText(this)" onblur="clearText(this)" required>
+                <input type="password" id="passwordInputSignin" value="Password" name="q" size="10" class="login_field" title="password" pattern=".*" onfocus="clearText(this)" onblur="clearText(this)" required>
+                <input type="submit" value="" id="login_btn"  />
+            </form>
+        </div>
+    </div>
+  
+    
+</div>
+
+<script src="js/vendor/jquery-3.1.0.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/aws-cognito-sdk.min.js"></script>
+<script src="js/vendor/amazon-cognito-identity.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cognito-auth.js"></script>
+</body>
+</html>

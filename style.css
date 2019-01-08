@@ -1,0 +1,176 @@
+/* body {
+    background-color: #E1EDE8;
+} */
+
+/*h1 {
+    text-align: center;
+    font-size: 50px;
+    color: darkblue;
+}
+h2 {
+    text-align: center;
+    font-size: 50px;
+    color: darkblue;
+}*/
+form {
+    margin: 20px auto;
+    width: 344px;
+    color: rgb(8, 8, 8);
+}
+input {
+    padding: 10px;
+    font-size: inherit;
+
+}
+input[type="text"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+}
+input[type="file"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+}
+input[type="submit"]{
+    width: 344px;
+    height: 45px;
+    border: none;
+    background: steelblue;
+    color: white;
+
+}
+label {
+    padding : 85px;
+    
+}
+
+/* #submitbut {
+    position: absolute;
+    top: 50%;
+    padding: 10px 25px;
+	color: #7a5454;
+	background: #181010; 
+	border: 1px solid #421;
+	margin-top: 10px;
+} */
+
+/* #submit_form {
+    position: relative;
+    top: 50%;
+    padding: 10px 25px;
+	color: #7a5454;
+	background: black;
+	border: 1px solid #421;
+    margin-top: 80px;
+    
+} */
+
+#submit_form:hover{
+    background: #383;
+}
+
+button {
+    /* margin:auto; */
+    display: block;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+}    
+       
+#submit_form {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    position: relative;
+    top: 50%;
+    padding: 10px 25px;
+}
+#fetchqes {
+    background-color: white;
+    color: black; 
+    border: 2px solid #4CAF50;
+    position: relative;
+    top: 50%;
+    padding: 10px 25px;
+
+}
+#fetchqes:hover{
+    background: #383;
+}
+.hidden {
+    display: none;
+}
+
+/* #codeeditorbar{
+    position: absolute;
+    width: 50%;
+    height : 400px;
+    background: red; 
+} */
+
+/* editor here */
+
+body {
+    /* overflow: hidden; */
+    background-color: #E1EDE8;
+}
+#entries{
+    padding : 30px;
+    margin: auto;
+    width: 200%;
+    background-color: rgb(241, 237, 243);
+
+}
+
+/* #editordiv{
+    position: absolute;
+    background-color: pink;
+    width: 50%;
+} */
+
+/* #editordiv1{
+    position: relative;
+    background-color: zzzzpink;
+    width: 50%;
+} */
+
+/* #editordiv2{
+    position: absolute;
+    background-color: pink;
+    width: 50%;
+} */
+
+
+/*#editor {
+    margin: 5px;
+    width: 600px;
+    height : 200px;
+    padding: 10px;
+    float: left;
+}
+#editor1 {
+    margin: 5px;
+    width: 600px;
+    height : 200px;
+    padding: 10px;
+    float: left;
+}
+#editor2 {
+    margin: 5px;
+    width: 600px;
+    height : 200px;
+    padding: 10px;
+    float: left;
+}*/
