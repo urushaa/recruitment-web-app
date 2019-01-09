@@ -1,5 +1,6 @@
-$(document).ready(function() {
-    
+$(document).ready(function()
+$("button").click(function() {
+
     $.get("https://ofhwk42qe9.execute-api.us-east-1.amazonaws.com/prod/question-collection", function(data,status){
         $("p#question1").text(data[0].question) && $("p#id1").text(data[0].id);
         $("p#question2").text(data[1].question) && $("p#id2").text(data[1].id);

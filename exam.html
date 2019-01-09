@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exam</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="style-two.css" rel="stylesheet" type="text/css" />
+<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+</head>
+<body>
+
+<div id="style2_wrapper">
+	<div id="style2_top">
+        <div id="style2_menu">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="signupp.html">examinee form</a></li>
+                <li><a href="exam.html">Entrance Exam</a></li>
+                <li><a href="registerUser.html">register admin</a></li>
+               
+            </ul>    	
+        </div>
+    </div>
+ </div>
+ <h2> Entrance Questions: </h2>
+ <div id="entries" class="hidden">
+        <div id="editordiv">
+         <p id='id3' ></p>
+         <p id='question3'></p></br>
+        
+         <fieldset>
+         <p>
+            <label>Answer</label>
+            <!-- <textarea id = "myTextArea" rows="3" cols="50"> 
+                  </textarea> -->
+                    <pre id="editor" ></pre>
+          </p>
+        </fieldset>
+
+        </div>
+
+        <div id="editordiv1">
+         <p id='id2' ></p>
+         <p id='question2'> </p></br>
+         
+         <fieldset> 
+            <p>
+               <label>Answer</label>
+               <!-- <textarea id = "myTextArea" rows="3" cols="50"> 
+                       </textarea> -->
+                       <pre id="editor1" >
+                </pre>
+
+             </p>
+           </fieldset>
+        </div>
+
+        <div id="editordiv2">
+         <p id='id1' ></p>
+         <p id='question1'></p> </br>
+         
+         <fieldset>
+            <p>
+               <label>Answer</label>
+               <!-- <textarea id = "myTextArea" rows="3" cols="50"> 
+                       </textarea> -->
+                       <pre id="editor2"></pre>
+             </p>
+           </fieldset>
+        </div>
+
+           <!-- <div id="codeeditorbar">
+
+           </div> -->
+ </div>
+
+ <div>
+     <button onclick="showOnClick()" id="fetchqes"> Fetch questions </button>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+ <!-- https://z6s1awcar9.execute-api.us-east-1.amazonaws.com/test/questioncollection -->
+ <script type="text/javascript">
+     
+ $(document).ready(function() {
+     $("button").click(function(){
+         $.get("https://ofhwk42qe9.execute-api.us-east-1.amazonaws.com/prod/question-collection", function(data,status){
+             $("p#question1").text(data[0].question) && $("p#id1").text(data[0].id);
+             $("p#question2").text(data[1].question) && $("p#id2").text(data[1].id);
+             $("p#question3").text(data[2].question) && $("p#id3").text(data[2].id);
+
+               
+     });
+ });
+ });
+ </script>
+ 
+ <script>
+     function showOnClick() {
+    var x = document.getElementById("entries");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "block";
+    }
+}
+ 
+ </script>
+ </div>
+
+       
+ <script src="https://s3.amazonaws.com/careergeneseentranceexamweb/embed+ace/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+     var editor = ace.edit("editor");
+     editor.setTheme("ace/theme/twilight");
+     editor.session.setMode("ace/mode/javascript");
+     editor.session.setMode("ace/mode/java");
+
+     var editor = ace.edit("editor1");
+     editor.setTheme("ace/theme/twilight");
+     editor.session.setMode("ace/mode/javascript");
+     editor.session.setMode("ace/mode/java");
+
+    var editor = ace.edit("editor2");
+     editor.setTheme("ace/theme/twilight");
+     editor.session.setMode("ace/mode/javascript");
+     editor.session.setMode("ace/mode/java");
+
+     // editor.session.setMode("C:\Users\Keshav\Desktop\embed ace\ace-builds\src")
+ </script>
+
+
+
+</body>
+</html>
